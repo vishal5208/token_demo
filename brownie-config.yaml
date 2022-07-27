@@ -1,0 +1,23 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0"
+
+dotenv: .env
+
+networks:
+  rinkeby:
+    verify: True
+  development:
+    verify: False
+  mainnet-fork:
+    verify: False
+
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+token_name: ${TOKEN_NAME}
+token_symbol: ${TOKEN_SYMBOL}
